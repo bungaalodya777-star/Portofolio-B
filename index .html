@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Bunga Alodya</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-rose': '#FCE7F3',
+                        'rose-dark': '#BE185D',
+                        'soft-slate': '#F8FAFC',
+                        'text-dark': '#334155',
+                        'accent-gold': '#D4AF37',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(135deg, #FFF1F2 0%, #F8FAFC 100%); }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #BE185D;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="text-text-dark font-sans antialiased selection:bg-rose-200">
+
+    <!-- HEADER -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold text-rose-dark">Bunga<span class="text-gray-600">Alodya.</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="nav-link text-gray-600 hover:text-rose-dark">BERANDA</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-rose-dark">TENTANG</a>
+                <a href="#skills" class="nav-link text-gray-600 hover:text-rose-dark">KEAHLIAN</a>
+                <a href="#portfolio" class="nav-link text-gray-600 hover:text-rose-dark">PENGALAMAN</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-rose-dark">KONTAK</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BERANDA -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 text-center md:text-left fade-in-up">
+                <span class="inline-block py-1 px-3 bg-rose-100 text-rose-dark rounded-full text-xs font-semibold mb-4">PORTFOLIO</span>
+                <h1 class="text-4xl md:text-6xl font-serif font-bold text-gray-800 mb-4 leading-tight">
+                    Halo, Saya <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-purple-600">Bunga Alodya</span>
+                </h1>
+                <p class="text-lg font-medium text-gray-600 mb-2">Pelajar Berprestasi | Pemimpin Muda | Public Speaker</p>
+                <p class="text-gray-500 mb-8 max-w-lg mx-auto md:mx-0">Pelajar aktif, berprestasi, dan visioner yang konsisten membangun diri melalui kepemimpinan, organisasi, seni, dan pengembangan karakter.</p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="px-8 py-3 bg-rose-600 text-white rounded-full shadow-lg hover:bg-rose-700 transition">Kontak</a>
+                </div>
+            </div>
+
+            <!-- BAGIAN FOTO -->
+            <div class="order-1 md:order-2 flex justify-center fade-in-up">
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-rose-200 to-purple-100 rounded-full blur-2xl opacity-70"></div>
+                    <div class="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-gray-200 flex items-center justify-center">
+                         
+                        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                        <!-- !!! SIMPAN FOTO KAMU DI SINI: Ganti link di bawah ini dengan nama file foto kamu      !!! -->
+                        <!-- !!! Contoh: src="bunga.jpg" atau src="foto-profil.png"                                 !!! -->
+                        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                        
+                        <img src="https://via.placeholder.com/600x600/f3f4f6/9ca3af?text=FOTO+BUNGA+DISINI" 
+                             alt="Foto Profil Bunga Alodya" 
+                             class="w-full h-full object-cover transform transition hover:scale-105">
+                        
+                        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto glass-card p-10 rounded-3xl fade-in-up">
+                <h2 class="text-3xl font-serif font-bold text-gray-800 mb-6">Tentang Saya</h2>
+                <p class="text-gray-600 leading-loose italic">"Saya adalah pribadi yang percaya diri, komunikatif, dan memiliki personal branding yang kuat dalam bidang public speaking dan kepemimpinan. Saya terbiasa tampil sebagai representasi organisasi, memimpin kegiatan, serta menyampaikan gagasan secara sistematis."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN -->
+    <section id="skills" class="py-20 bg-soft-slate">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-12">Keahlian Profesional</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-50">
+                    <i class="fas fa-microphone-lines text-rose-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold">Public Speaking</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-50">
+                    <i class="fas fa-users-cog text-purple-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold">Kepemimpinan</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-50">
+                    <i class="fas fa-hourglass-half text-blue-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold">Manajemen Waktu</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-50">
+                    <i class="fas fa-sitemap text-green-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold">Organisasi</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-50">
+                    <i class="fas fa-comments text-orange-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold">Komunikasi</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-50">
+                    <i class="fas fa-handshake text-indigo-600 text-2xl mb-4"></i>
+                    <h3 class="font-bold">Kerja Tim</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section id="portfolio" class="py-20 px-6 bg-white">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-serif font-bold mb-8 italic">Pengalaman & Prestasi</h3>
+                <div class="space-y-6 border-l-2 border-rose-100 pl-8 ml-4">
+                    <div class="relative">
+                        <span class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-rose-600 border-4 border-white"></span>
+                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 shadow-sm">
+                            <h4 class="font-bold">Duta Hukum dan HAM</h4>
+                            <p class="text-rose-600 text-sm">Jawa Barat</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-rose-500 border-4 border-white"></span>
+                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 shadow-sm">
+                            <h4 class="font-bold">Ketua Pilar Teater</h4>
+                            <p class="text-rose-600 text-sm">Seni & Kreativitas</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-rose-400 border-4 border-white"></span>
+                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 shadow-sm">
+                            <h4 class="font-bold">Wakil Paskibra</h4>
+                            <p class="text-rose-600 text-sm">Organisasi Sekolah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-serif font-bold mb-8 italic">Riwayat Pendidikan</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">SMAN 1 Subang</div>
+                    <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">SMPN 1 Subang</div>
+                    <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">SDN Dwi Karya</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <footer id="contact" class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-serif font-bold mb-6 italic">Hubungi Saya</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-10">
+                <a href="mailto:bungaalodya777@gmail.com" class="hover:text-rose-400 transition"><i class="fas fa-envelope mr-2"></i> bungaalodya777@gmail.com</a>
+                <a href="https://instagram.com/bungaalodya_" class="hover:text-rose-400 transition"><i class="fab fa-instagram mr-2"></i> @bungaalodya_</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; Bunga Alodya – Portofolio Pribadi | Personal Branding | Leadership | Public Speaking</p>
+        </div>
+    </footer>
+
+</body>
+</html>
